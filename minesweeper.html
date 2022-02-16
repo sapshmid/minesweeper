@@ -1,132 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <!-- Meta elements-->
-    <meta charset="utf-8">
-    <meta name="description" content="Minesweeper">
-    <meta name="author" content="Sapir Shmidman">
-    <!-- Link to css style file-->
-    <link rel="stylesheet" href="minesweeperStyle.css">
-    <!-- Title of the page-->
-    <title> Minesweeper - Sapir </title>
-</head>
+    <head>
+        <!-- Meta elements-->
+        <meta charset="utf-8">
+        <meta name="description" content="Minesweeper">
+        <meta name="author" content="Sapir Shmidman">
+        <!-- Link to css style file-->
+        <link rel="stylesheet" href="minesweeperStyle.css">
+        <!-- Title of the page-->
+        <title> Minesweeper - Sapir </title>
+    </head>
 
-<body>
-    <header class="Header-section">
-        <h1 class="Minesweeper-heading"> Minesweeper - Sapir </h1>
-        <p class="Header-paragraph"> Welcome to my version of Minesweeper! </p>
-    </header>
-    <main>
-        <div class="Input-box">
-            <label for="fieldHeight">Insert field height here: </label>
-            <input type="number" id="fieldHeight" name="fieldHeight" value="5">
-            <label for="fieldWidth">Insert field width here: </label>
-            <input type="number" id="fieldWidth" name="fieldWidth" value="5">
-            <label for="totalBombsNum">Insert total amoumnt of bombs here: </label>
-            <input type="number" id="totalBombsNum" name="totalBombsNum" value="10">
-        </div>
-        <div class="Field-table-box">
-            <table class="Field-table">
-                <tr class="Field-row">
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                </tr>
-                <tr class="Field-row">
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                </tr>
-                <tr class="Field-row">
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                </tr>
-                <tr class="Field-row">
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                </tr>
-                <tr class="Field-row">
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                    <td class="Field-data">
-                        <div class="Field-cell-box"> rdhsdhba </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="TimerBombs-box">
-            <p> Timer: 00:00 </p>
-            <p> Number of bombs left: 10 </p>
-            <button type="button">Start Game</button>
-        </div>
-    </main>
-    <footer class="Footer-section">
-        <p>
-            Today's kids will never know how to play Minesweeper.
-            <br> Because neither did we.
-        </p>
-    </footer>
-</body>
+    <body>
+        <!-- Header with the title of the page and a welcome sentence -->
+        <header class="Header-section">
+            <h1 class="Minesweeper-heading"> Minesweeper - Sapir </h1>
+            <p class="Header-paragraph"> Welcome to my version of Minesweeper! </p>
+        </header>
+        <!-- Main part, contains a table which is the field, a few input tags, a timer and a start button.
+             broken up to 3 parts. -->
+        <main>
+            <!-- First part of main, input tags for the user to choose the size of the filed 
+                and the number of bombs. -->
+            <div class="Input-box">
+                <div class="InputLabel-couple">
+                    <div class="Label"> <label for="fieldHeight"> Insert field height here: </label> </div>
+                    <input type="number" id="fieldHeight" name="fieldHeight" value="5">
+                </div>
+                <div class="InputLabel-couple">
+                    <div class="Label"> <label for="fieldWidth">Insert field width here: </label> </div>
+                    <input type="number" id="fieldWidth" name="fieldWidth" value="5">
+                </div>
+                <div class="InputLabel-couple">
+                    <div class="Label"> <label for="totalBombsNum">Insert total amoumnt of bombs here: </label> </div>
+                    <input type="number" id="totalBombsNum" name="totalBombsNum" value="10">
+                </div>
+            </div>
+            <div class="Field-table-box">
+                <table class="Field-table">
+                    <tr class="Field-row">
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                    </tr>
+                    <tr class="Field-row">
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                    </tr>
+                    <tr class="Field-row">
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                    </tr>
+                    <tr class="Field-row">
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                    </tr>
+                    <tr class="Field-row">
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                        <td class="Field-data">
+                            <div class="Field-cell-box"> </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="TimerBombs-box">
+                <p> Timer: 00:00 </p>
+                <p> Number of bombs left: 10 </p>
+                <button type="button">Start Game</button>
+            </div>
+        </main>
+        <footer class="Footer-section">
+            <p class="Footer-paragraph">
+                Today's kids will never know how to play Minesweeper.
+                <br> Because neither did we.
+            </p>
+        </footer>
+    </body>
 
 </html>
