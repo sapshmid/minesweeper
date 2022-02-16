@@ -91,8 +91,9 @@ main {
     border-radius: 6px;
     width: 100px;
     height: 25px;
-    font-size: 15px;
+    font-size: 18px;
     border: rgb(204, 124, 110) solid;
+    text-align: center;
 }
 
 
