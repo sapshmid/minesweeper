@@ -24,24 +24,39 @@
             <!-- First part of main, input tags for the user to choose the size of the filed 
                 and the number of bombs. -->
             <div class="Input-box">
+                <!-- First div, contains all the input-labels couples -->
                 <div class="InputLabel-couple">
-                    <div class="Label"> <label for="fieldHeight"> Insert field height here: </label> </div>
+                    <!-- Second div, there are three of these, each one contains one input-lable couple -->
+                    <div class="Label">
+                        <!-- This div is a container for the label -->
+                        <label for="fieldHeight"> Insert field height here: </label>
+                    </div>
                     <input type="number" id="fieldHeight" name="fieldHeight" value="5">
                 </div>
                 <div class="InputLabel-couple">
-                    <div class="Label"> <label for="fieldWidth">Insert field width here: </label> </div>
+                    <div class="Label">
+                        <label for="fieldWidth">Insert field width here: </label>
+                    </div>
                     <input type="number" id="fieldWidth" name="fieldWidth" value="5">
                 </div>
                 <div class="InputLabel-couple">
-                    <div class="Label"> <label for="totalBombsNum">Insert total amoumnt of bombs here: </label> </div>
+                    <div class="Label">
+                        <label for="totalBombsNum">Insert total amoumnt of bombs here: </label>
+                    </div>
+                    <!-- This is the button to start the game-->
                     <input type="number" id="totalBombsNum" name="totalBombsNum" value="10">
                 </div>
+                <button type="button" class="Start-Button"> Start Game </button>
             </div>
             <div class="Field-table-box">
+                <!-- This div contains a table which is the minefield, -->
                 <table class="Field-table">
-                    <tr class="Field-row">
+                    <tr>
+                        <!-- This is a row in the table, each one has the same class name -->
                         <td class="Field-data">
+                            <!-- This is the cell in the table, each of these has the same class name -->
                             <div class="Field-cell-box"> </div>
+                            <!-- Every cell has a div to make it a container to fill the cell -->
                         </td>
                         <td class="Field-data">
                             <div class="Field-cell-box"> </div>
@@ -127,12 +142,13 @@
                 </table>
             </div>
             <div class="TimerBombs-box">
+                <!-- This part shows the timer and the amount of bombs left-->
                 <p> Timer: 00:00 </p>
                 <p> Number of bombs left: 10 </p>
-                <button type="button">Start Game</button>
             </div>
         </main>
         <footer class="Footer-section">
+            <!-- This is the footer section, contains a catchphrase for the the game-->
             <p class="Footer-paragraph">
                 Today's kids will never know how to play Minesweeper.
                 <br> Because neither did we.
