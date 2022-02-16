@@ -1,0 +1,102 @@
+body {
+    background-color: Gainsboro;
+}
+
+.Header-section {
+    background-color: rgb(146, 62, 62);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -25px;
+}
+
+.Minesweeper-heading {
+    font-size: 45px;
+    font-family: Lucida Console;
+}
+
+.Header-paragraph {
+    font-size: 20px;
+}
+
+main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Input-box {
+    background-color: DarkSalmon;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+.Field-table-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Can I change the size of the cells to fit to the number of cells chosen by the user? */
+
+.Field-table {
+    background-color: CadetBlue;
+    width: 50px;
+    height: 50px;
+    border-collapse: collapse;
+    border: 2px solid black;
+    box-shadow: 2px 2px 5px black;
+}
+
+.Field-row {
+    box-shadow: 2px 2px 5px black;
+}
+
+.Field-data {
+    background-color: CadetBlue;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-collapse: collapse;
+    border: 2px solid black;
+    box-shadow: 2px 2px 5px black;
+}
+
+.Field-cell-box {
+    background-color: CadetBlue;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    box-shadow: 2px 2px black;
+}
+
+.TimerBombs-box {
+    background-color: DarkSalmon;
+}
+
+.Footer-section {
+    background-color: rgb(146, 62, 62);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-top: -5px;
+}
