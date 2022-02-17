@@ -1,22 +1,44 @@
+/* TODO: No capital letters. Words should always be split up DONE*/
+
+body {
+    --margin: -8px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+}
+
+.body-box {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
 /* Style for the header */
 
-.Header-section {
+.header-section {
     background-color: rgb(170, 83, 83);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-self: center;
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-left: var(--margin);
+    margin-right: var(--margin);
     margin-top: -25px;
-    width: 1372px;
+    width: 101%;
+    max-zoom: 50%;
 }
 
 
 /* Style for the heading inside the header */
 
-.Minesweeper-heading {
+.header-heading {
     font-size: 45px;
     font-family: Lucida Console;
 }
@@ -24,7 +46,7 @@
 
 /* Style for the paragraph inside the heading */
 
-.Header-paragraph {
+.header-paragraph {
     font-size: 15px;
     font-family: Lucida Console;
     font-weight: bold;
@@ -33,34 +55,43 @@
 
 /* Style for main part */
 
-main {
+
+/* TODO: I don't like using element selectors alone */
+
+.main-box {
     background-color: rgb(197, 148, 132);
     display: flex;
-    flex-flow: wrap;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
-    margin-left: -15px;
-    margin-right: -15px;
-    width: 1372px;
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
 }
 
 
 /* Style for the left side of the page, input tags and start button */
 
-.Input-box {
+
+/* TODO: remove margin DONE */
+
+.input-box {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: -15px;
     padding: 10px;
 }
 
 
 /* style for the couples of input and labels */
 
-.InputLabel-couple {
+
+/* TODO: two words DONE */
+
+.input-label-couple {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-evenly;
@@ -72,22 +103,25 @@ main {
 
 /* Style for the labels */
 
-.Label {
+.label {
     margin: 10px;
     padding: 5px;
     display: flex;
     justify-content: space-around;
     font-weight: bold;
     font-size: 20px;
-    color: DarkRed;
+    color: black;
 }
 
 
 /* style for the input containers */
 
-#fieldWidth,
-#fieldHeight,
-#totalBombsNum {
+
+/* TODO: 2 words DONE */
+
+#field-width,
+#field-height,
+#total-bombs-num {
     border-radius: 6px;
     width: 100px;
     height: 25px;
@@ -99,7 +133,7 @@ main {
 
 /* Style for the start button */
 
-.Start-Button {
+.start-button {
     padding: 8px;
     margin-top: 10px;
     font-size: 15px;
@@ -115,17 +149,17 @@ main {
 
 /* Hover for the style button */
 
-.Start-Button:hover {
+.start-button:hover {
     opacity: 0.7;
 }
 
 
-/* Can I change the size of the cells to fit to the number of cells chosen by the user? */
+/* Can I change the size of the cells to fit to the number of cells chosen by the user? **JS** */
 
 
 /* Style for the container of the middle part of the page - the field table */
 
-.Field-table-box {
+.field-table-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,7 +170,7 @@ main {
 
 /* Style for the field table itself */
 
-.Field-table {
+.field-table {
     background-color: CadetBlue;
     width: 50px;
     height: 50px;
@@ -148,7 +182,7 @@ main {
 
 /* Style for the table's cells */
 
-.Field-data {
+.field-data {
     background-color: rgb(158, 212, 214);
     width: 50px;
     height: 50px;
@@ -161,7 +195,7 @@ main {
 
 /* Style for the container inside the table's cell */
 
-.Field-cell-box {
+.field-cell-box {
     background-color: rgb(127, 183, 185);
     width: 50px;
     height: 50px;
@@ -172,16 +206,16 @@ main {
 
 /* Hover for the container of the table's cell */
 
-.Field-cell-box:hover {
+.field-cell-box:hover {
     opacity: 0.5;
 }
 
 
 /* Style for the third part of the page - the timer and the line that shows how many bombs are left */
 
-.TimerBombs-box {
+.timer-bombs-box {
     padding: 10px;
-    color: DarkRed;
+    color: black;
     font-size: 30px;
     font-weight: bold;
     display: flex;
@@ -193,7 +227,7 @@ main {
 
 /* Style for the footer section */
 
-.Footer-section {
+.footer-section {
     background-color: rgb(170, 83, 83);
     font-family: Lucida Console;
     display: flex;
@@ -201,17 +235,19 @@ main {
     justify-content: center;
     align-items: center;
     align-self: center;
-    margin-left: -15px;
-    margin-right: -15px;
-    margin-bottom: -15px;
-    padding-top: -5px;
-    width: 1372px;
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+    margin-top: -8px;
+    margin-bottom: -8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 101%;
 }
 
 
 /* Style for the paragraph inside the footer */
 
-.Footer-paragraph {
+.footer-paragraph {
     text-align: center;
     font-weight: bold;
     font-size: 17px;
