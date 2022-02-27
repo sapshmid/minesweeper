@@ -15,9 +15,36 @@ document.getElementById('start-button').addEventListener('click', printSize);
 [...document.getElementsByClassName('field-cell-box')].forEach(cell => {
     cell.addEventListener('click', printSize);
 });
+// totalCells is the size of the field - multipiction of the height and width
+const totalCells = heightElement.value * widthElement.value;
+// console.log(totalCells);    
+// Creat the field as an array and make all it's values 0
+const fieldArray = [];
+for (let i = 0; i < totalCells; i++) {
+    fieldArray.push(0);
+}
+console.log(fieldArray);
 
 
-
+// Get the number of bombs from the input
+const bombsNum = document.getElementById('total-bombs-num');
+// Counter for bombs placed 
+let bombsPlaced = 0;
+// Loop placing the bombs on the field according to input amount of bombs 
+while (bombsPlaced < bombsNum.value) {
+    // Get random index in the array and make sure not to use the same index more then once
+    let randomIndex = Math.floor(Math.random() * fieldArray.length);
+    while (fieldArray[randomIndex] === '*') {
+        randomIndex = Math.floor(Math.random() * fieldArray.length);
+    }
+    // Place * in the index chosen as a simble for bomb
+    fieldArray[randomIndex] = '*';
+    console.log(randomIndex);
+    // Increas counter
+    bombsPlaced++;
+}
+// Print the array/field
+console.log(fieldArray);
 
 
 
