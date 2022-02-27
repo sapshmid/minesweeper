@@ -32,26 +32,26 @@
                             <!-- This div is a container for the label -->
                             <label for="field-height"> Insert field height here: </label>
                         </div>
-                        <input type="number" id="field-height" name="field-height" value="5">
+                        <input type="number" id="field-height" name="field-height" value=5>
                     </div>
                     <div class="input-label-couple">
                         <div class="label">
                             <label for="field-width">Insert field width here: </label>
                         </div>
-                        <input type="number" id="field-width" name="field-width" value="5">
+                        <input type="number" id="field-width" name="field-width" value=5>
                     </div>
                     <div class="input-label-couple">
                         <div class="label">
                             <label for="total-bombs-num">Insert total amoumnt of bombs here: </label>
                         </div>
-                        <input type="number" id="total-bombs-num" name="total-bombs-num" value="10">
+                        <input type="number" id="total-bombs-num" name="total-bombs-num" value=10>
                     </div>
                     <!-- This is the button to start the game-->
-                    <button type="button" class="start-button"> Start Game </button>
+                    <button type="button" id="start-button"> Start Game </button>
                 </div>
                 <div class="field-table-box">
                     <!-- This div contains a table which is the minefield, -->
-                    <table class="field-table">
+                    <table id="field-table">
                         <tr class="field-row">
                             <!-- This is a row in the table, each one has the same class name -->
                             <td class="field-data">
@@ -156,6 +156,8 @@
                 </p>
             </footer>
         </div>
+        <script src="minesweeperScript.js">
+        </script>
     </body>
 
 </html>
