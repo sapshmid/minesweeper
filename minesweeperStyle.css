@@ -133,7 +133,7 @@ body {
 
 /* Style for the start button */
 
-.start-button {
+#start-button {
     padding: 8px;
     margin-top: 10px;
     font-size: 15px;
@@ -149,7 +149,7 @@ body {
 
 /* Hover for the style button */
 
-.start-button:hover {
+#start-button:hover {
     opacity: 0.7;
 }
 
@@ -170,7 +170,7 @@ body {
 
 /* Style for the field table itself */
 
-.field-table {
+#field-table {
     background-color: CadetBlue;
     width: 50px;
     height: 50px;
@@ -201,6 +201,8 @@ body {
     height: 50px;
     padding: 5px;
     box-shadow: 2px 2px black;
+    font-size: 20px;
+    text-align: center;
 }
 
 
