@@ -1,6 +1,8 @@
 const heightElement = document.getElementById('field-height');
 const widthElement = document.getElementById('field-width');
 const bombsNumElement = document.getElementById('total-bombs-num');
+let ACTIVE_FIELD = null;
+const CLASS_NAME_CELL = 'field-cell-box';
 
 /*function printSize(event) {
     console.log(heightElement.value);
@@ -23,6 +25,7 @@ function startGame() {
     // Get the number of bombs from the input
     const bombsStart = Number(bombsNumElement.value);
     const field = createField(heightStart, widthStart, bombsStart);
+    ACTIVE_FIELD = field;
     console.log(field);
 }
 
@@ -66,3 +69,35 @@ function createField(heightValue, widthValue, bombsValue) {
     return fieldArray;
 }
 document.getElementById('start-button').addEventListener('click', startGame);
+
+function getValue(index) {
+    const value = ACTIVE_FIELD[index];
+    return value;
+}
+
+function cellIndexAttribute() {
+    const cellName = document.getElementsByClassName(CLASS_NAME_CELL);
+    for (let i = 0; i < cellName.length; i++) {
+        cellName[i].setAttribute('index', i);
+    }
+}
+
+function getIndex(element) {
+    const elementIndex = element.getAttribute('index');
+    return elementIndex;
+}
+
+function onCellClick(event) {
+    const targetElement = event.target;
+    console.log(targetElement);
+    const indexClicked = getIndex(targetElement);
+    console.log(indexClicked);
+    const valueClicked = getValue(indexClicked);
+    console.log(valueClicked);
+    targetElement.innerHTML = valueClicked;
+}
+cellIndexAttribute();
+
+[...document.getElementsByClassName('field-cell-box')].forEach(cell => {
+    cell.addEventListener('click', onCellClick);
+});
